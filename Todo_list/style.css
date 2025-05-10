@@ -1,7 +1,6 @@
 :root {
     --primary-color: #F4CE01;
     --secondary-color: #0F0F0B;
-    --other-color: #fff59d;
     --box-color: #fff59d;
 }
 
@@ -39,7 +38,7 @@ body {
     margin-top: 50px;
     box-shadow: 1px 1px 5px var(--secondary-color);
     font-size: 3rem;
-    color: var(--other-color);
+    color: var(--box-color);
 }
 
 .todo_list {
