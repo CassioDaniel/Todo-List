@@ -28,4 +28,16 @@ const atualizarTela = () => {
     banco.forEach (item => criarItem (item.tarefa, item.status));
 }
 
+const inserirItem = (evento) => {
+    const tecla = evento.key;
+    const texto = evento.target.value;
+    if (tecla === 'Enter') {
+        banco.push ({'tarefa': texto, 'status': ''})
+        atualizarTela();
+        evento.target.value = '';
+    }
+}
+
+document.getElementById('newItem').addEventListener('keypress', inserirItem);
+
 atualizarTela();
