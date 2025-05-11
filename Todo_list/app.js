@@ -1,8 +1,6 @@
 'use strict';
 
-let banco = [];
-
-const getBanco = () => JSON.parse(localStorage.getItem ('todoList')) ?? [];
+const getBanco = () => JSON.parse(localStorage.getItem('todoList')) ?? [];
 const setBanco = (banco) => localStorage.setItem ('todoList', JSON.stringify(banco));
 
 const criarItem = (tarefa, status, indice) => {
@@ -51,7 +49,7 @@ const removerItem = (indice) => {
 const atualizarItem = (indice) => {
     const banco = getBanco();
     banco[indice].status = banco[indice].status === '' ? 'checked' : '';
-    setBanco();
+    setBanco(banco);
     atualizarTela();
 }
 
